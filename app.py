@@ -1,11 +1,14 @@
-from flask import Flask 
+from flask import Flask
 
-app = Flask("meu app")
+app = Flask(__name__)
 
 @app.route('/')
 def hello():
     return "Hello World"
-  
+
 @app.route('/novo')
 def novo():
-    return "<h1>Nova pagina</h1>"
+     return "Olá Mundo!"
+
+
+app.run()
